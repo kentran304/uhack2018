@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 def home(request):
     return redirect(restaurant_home)
 
+    
 @login_required(login_url='/restaurant/sign-in')
 def restaurant_home(request):
     return render(request, 'restaurant/base.html', {})
