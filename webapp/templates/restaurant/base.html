@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block Title %} Restaurant {% endblock %} {% block script %}
-<script>
+<!-- <script>
     $(document).ready(function () {
         var now = new Date();
         setInterval(function () {
@@ -16,7 +16,8 @@
             })
         }, 3000)
     })
-</script> {% endblock %} 
+</script>  -->
+{% endblock %} 
 {% block sidebar %} 
 {% url 'restaurant-order' as restaurant_order_url %} 
 {% url 'restaurant-meal' as restaurant_meal_url %} 
