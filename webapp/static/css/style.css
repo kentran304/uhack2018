@@ -27,7 +27,7 @@ body {
 }
 
 /* SIDE BAR */
-.col-2.sidebar {
+.col-sm-2.sidebar {
     height: 100vh;
     position: fixed;
     top: 0;
@@ -38,18 +38,18 @@ body {
 }
 
 /* SIDE BAR - HEADER */
-.col-2.sidebar > div:first-child {
+.col-sm-2.sidebar > div:first-child {
     padding: 30px 10px;
     font-weight: bold;
     font-size: 15px;
     background-color: #383957;
 }
 
-.col-2.sidebar > div:first-child > h4 {
+.col-sm-2.sidebar > div:first-child > h4 {
     color: #e0deeb;
 }
 
-.col-2.sidebar > div:first-child > h5 {
+.col-sm-2.sidebar > div:first-child > h5 {
     color: #b6b4c1;
 }
 
