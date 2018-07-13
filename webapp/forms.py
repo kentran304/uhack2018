@@ -22,6 +22,11 @@ class RestaurantForm(forms.ModelForm):
         model = Restaurant
         fields = ("name", "phone", "address", "logo")
 
+
+    def __init__(self, *args, **kwargs):
+        super(RestaurantForm, self).__init__(*args, **kwargs)
+        self.fields['name'].label = "Restaurant Name"
+
 class MealForm(forms.ModelForm):
     class Meta:
         model = Meal
