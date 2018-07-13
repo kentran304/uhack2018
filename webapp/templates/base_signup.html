@@ -21,17 +21,16 @@
 <body class="bg-blue">
     <div class="container">
         <div class="row">
-            <div class="col-4 offset-4">
-                <br/>
-                <br/>
-                <br/>
-                <div class="card card-body">
+            <div class="col-10 offset-1">
+                <br />
+                <br />
+                <br />
+                <div class="card">
                     <div class="card-body">
                         <h3 class="text-center text-uppercase">
-                            <b>{% block heading %} {% endblock %}</b>
+                            <b>{% block heading %}{% endblock %}</b>
                         </h3>
-                        <br/> 
-                        {% block content %}{% endblock %}
+                        <br /> {% block content %}{% endblock %}
                     </div>
                 </div>
             </div>
