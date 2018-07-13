@@ -1,1 +1,4 @@
-<h1>Restaurant - Report</h1>
+{% extends 'restaurant/base.html' %} 
+{% block page %} Restaurant Report
+<a href="{% url 'restaurant-sign-out' %}">Log out</a>
+{% endblock %}
