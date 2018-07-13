@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
-    return redirect(restaurant_home)
+    return render(request, 'index.html', {})
+    # return redirect(restaurant_home)
 
-    
 @login_required(login_url='/restaurant/sign-in')
 def restaurant_home(request):
     return render(request, 'restaurant/base.html', {})
