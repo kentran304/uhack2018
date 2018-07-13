@@ -13,29 +13,36 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url, include
 from django.contrib import admin
-from django.urls import path
-from webapp import views
 from django.contrib.auth import views as auth_views
 
-
-# Import static and setting
 from django.conf.urls.static import static
 from django.conf import settings
 
+from webapp import views
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('restaurant/', views.restaurant_home, name='restaurant-home'),
-    path('restaurant/sign-in', auth_views.login, {'template_name': 'restaurant/sign_in.html'}, name='restaurant-sign-in'),
-    path('restaurant/sign-out', auth_views.logout, {'next_page': '/'}, name='restaurant-sign-out'),
-    path('restaurant/sign-up', views.restaurant_sign_up, name='restaurant-sign-up'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.home, name='home'),
 
-    path('restaurant/account', views.restaurant_account, name='restaurant-account'),
-    path('restaurant/order', views.restaurant_order, name='restaurant-order'),
-    path('restaurant/meal', views.restaurant_meal, name='restaurant-meal'),
-    path('restaurant/report', views.restaurant_report, name='restaurant-report'),
+    # Restaurant
+    url(r'^restaurant/sign-in/$', auth_views.login, 
+        {'template_name': 'restaurant/sign_in.html'},
+        name = 'restaurant-sign-in'),
+    url(r'^restaurant/sign-out', auth_views.logout, 
+        {'next_page': '/'},
+        name = 'restaurant-sign-out'),
+    url(r'^restaurant/sign-up', views.restaurant_sign_up, 
+        name = 'restaurant-sign-up'),
+    url(r'^restaurant/$', views.restaurant_home, name = 'restaurant-home'),
+    url(r'^restaurant/account/$', views.restaurant_account, name = 'restaurant-account'),
+    url(r'^restaurant/meal/$', views.restaurant_meal, name = 'restaurant-meal'),
+    url(r'^restaurant/meal/add/$', views.restaurant_add_meal, name = 'restaurant-add-meal'),
+    url(r'^restaurant/meal/edit/(?P<meal_id>\d+)/$', views.restaurant_edit_meal, name = 'restaurant-edit-meal'),
+    url(r'^restaurant/order/$', views.restaurant_order, name = 'restaurant-order'),
+    url(r'^restaurant/report/$', views.restaurant_report, name = 'restaurant-report'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
