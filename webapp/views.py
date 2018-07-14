@@ -7,11 +7,14 @@ from webapp.models import Meal, Order
 
 # Create your views here.
 def home(request):
+    return redirect(restaurant_meal)
+
+def welcome(request):
     return render(request, 'index.html', {})
 
 @login_required(login_url='/restaurant/sign-in/')
 def restaurant_home(request):
-    return redirect(restaurant_order)
+    return redirect(restaurant_account)
 
 @login_required(login_url='/restaurant/sign-in/')
 def restaurant_account(request):
@@ -81,6 +84,7 @@ def restaurant_order(request):
 @login_required(login_url='/restaurant/sign-in/')
 def restaurant_report(request):
     return render(request, 'restaurant/report.html', {})
+
 
 def restaurant_sign_up(request):
     user_form = UserForm()
