@@ -7,7 +7,7 @@ from webapp.models import Meal, Order
 
 # Create your views here.
 def home(request):
-    return redirect(restaurant_home)
+    return render(request, 'index.html', {})
 
 @login_required(login_url='/restaurant/sign-in/')
 def restaurant_home(request):

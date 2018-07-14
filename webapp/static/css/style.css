@@ -1,5 +1,4 @@
 body {
-    padding-top: 50px;
     background-color: #EDF2F5;
     overflow: auto;
 }
@@ -120,3 +119,55 @@ body {
 .table > thead > tr > th {
     border-color: #88A1B2;
 }
+
+.logo {
+    color: #E83F6F !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+}
+
+.footer-logo {
+    color: #E83F6F !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.hr-div {
+    border-top: 1px solid #E0E0E0;
+}
+
+.market {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 10px;
+}
+
+.footer{
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  /* height: 350px; */
+  line-height: 60px; 
+  background: #5a6268;
+  padding-top: 2em;
+  color: white;
+}
+
+.footer li {
+    list-style: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: white ;
+}
+
+.footer li a {
+     color: white ;
+     text-decoration: none;
+}
+.copy-right {
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
