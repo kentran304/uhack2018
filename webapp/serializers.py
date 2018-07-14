@@ -23,7 +23,7 @@ class MealSerializer(serializers.ModelSerializer):
         return request.build_absolute_uri(image_url)
     class Meta:
         model = Meal
-        fields = ("id", "name", "short_description", "image", "price")
+        fields = ("id", "name", "short_description", "image")
 
 # ORDER SERIALIZER
 
