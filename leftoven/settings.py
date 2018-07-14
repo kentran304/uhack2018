@@ -25,7 +25,7 @@ SECRET_KEY = '18#eb(&6_!muo6z#4q9-%4+a9g1us)qvzh6ib3pi_j+5v48ev1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pacific-falls-64683.herokuapp.com']
 
 
 # Application definition
