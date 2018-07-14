@@ -44,10 +44,13 @@ urlpatterns = [
     url(r'^restaurant/order/$', views.restaurant_order, name = 'restaurant-order'),
     url(r'^restaurant/report/$', views.restaurant_report, name = 'restaurant-report'),
 
+    url(r'^api/social/', include('rest_framework_social_oauth2.urls')),
+
+
     # API for customer
     url(r'^api/customer/restaurants/$', apis.customer_get_restaurants),
     url(r'^api/customer/meals/(?P<restaurant_id>\d+)$', apis.customer_get_meals),
-    
+
     url(r'^api/customer/order/add/$', apis.customer_add_order),
     url(r'^api/customer/order/latest/$', apis.customer_get_latest_order),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
