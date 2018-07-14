@@ -16,7 +16,7 @@
                     <th>Id</th>
                     <th>Name</th>
                     <th>Short Descripion</th>
-                    <th>Price</th>
+                    <th>Quantity</th>
                     <th class="text-center"></th>
                 </tr>
             </thead>
@@ -28,7 +28,7 @@
                         <a href="{% url 'restaurant-edit-meal' meal.id %}">{{ meal.name }}</a>
                     </td>
                     <td>{{ meal.short_description }}</td>
-                    <td>{{ meal.price }}</td>
+                    <td>{{ meal.quantity }}</td>
                     <td class="text-center">
                         <img class="rounded-circle" src="{{ MEDIA_URL }}{{ meal.image }}" width="50" height="50">
                     </td>
