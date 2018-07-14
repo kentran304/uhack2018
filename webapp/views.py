@@ -100,10 +100,7 @@ def restaurant_sign_up(request):
             new_restaurant.user = new_user
             new_restaurant.save()
 
-            login(request, authenticate(
-                user_name = user_form.cleaned_data["username"],
-                password = user_form.cleaned_data["password"]
-            ), backend='django.contrib.auth.backends.ModelBackend')
+            login(request, new_user, backend='django.contrib.auth.backends.ModelBackend')
 
             return redirect(restaurant_home)
 

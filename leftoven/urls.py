@@ -26,7 +26,7 @@ from webapp import views, apis
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^welcome/', views.welcome, name='welcome'),
+    url(r'^welcome/$', views.welcome, name='welcome'),
 
     # Restaurant
     url(r'^restaurant/sign-in/$', auth_views.login, 
