@@ -3,7 +3,7 @@ body {
     overflow: auto;
 }
 .bg-blue {
-    background-color: #3f3f63;
+    background-color: #f4f4f4;
 }
 
 .bg-gray {
@@ -16,13 +16,13 @@ body {
 
 .btn-pink {
     color: white;
-    background-color: #EE5462;
+    background-color: #ed3554;
 }
 
 .btn-pink:hover,
 .btn-pink:focus {
     color: white;
-    background-color: #DA4F5D;
+    background-color: #ed3554;
 }
 
 /* SIDE BAR */
@@ -89,7 +89,7 @@ body {
 
 .sidebar .list-group .list-group-item .badge,
 .sidebar .list-group .list-group-item.active .badge {
-    background-color: #EE5462;
+    background-color: #ed3554;
     color: #e0deeb;
 }
 
@@ -121,13 +121,13 @@ body {
 }
 
 .logo {
-    color: #E83F6F !important;
+    color: #ed3554 !important;
     font-family: 'Open Sans', sans-serif;
     font-size: 50px;
 }
 
 .footer-logo {
-    color: #E83F6F !important;
+    color: #ed3554 !important;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
@@ -189,4 +189,9 @@ body {
     text-align: center;
     color: white;
     font-size: 60px;
+}
+
+.card {
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

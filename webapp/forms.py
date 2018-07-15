@@ -9,6 +9,7 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ("username", "password", "first_name", "last_name", "email")
+        help_texts = {'username': "",}
         
 class UserFormForEdit(forms.ModelForm):
     email = forms.CharField(max_length=100, required=True)
