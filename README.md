@@ -10,7 +10,7 @@ For Developmant mode:
 In Settings.py change:
 + DEBUG = True
 + Comment out:
-    ALLOWED_HOSTS = ['pacific-falls-64683.herokuapp.com'] 
+    ALLOWED_HOSTS = ['app.herokuapp.com'] 
 + Uncomment Local host:
     ALLOWED_HOSTS = []
     
@@ -18,7 +18,7 @@ For Production mode:
 In Settings.py change:
 + DEBUG = True
 + Uncomment:
-    ALLOWED_HOSTS = ['pacific-falls-64683.herokuapp.com'] 
+    ALLOWED_HOSTS = ['app.herokuapp.com'] 
 + Comment out Local host:
     ALLOWED_HOSTS = []
     
