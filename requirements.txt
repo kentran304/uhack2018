@@ -16,7 +16,7 @@ pylint==1.9.2
 pytz==2018.5
 requests==2.19.1
 six==1.11.0
-urllib3==1.23
+urllib3==1.26.5
 wrapt==1.10.11
 whitenoise==3.3.1
 dj-database-url==0.5.0
